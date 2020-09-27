@@ -1,0 +1,190 @@
+$green: #86bb71;
+$blue: #94c2ed;
+$orange: #e38968;
+$gray: #92959e;
+$pink: #ffd5cd;
+$darkPink: #de4463;
+$lime: #d2e603;
+$lightGreen: #e0ece4;
+$darkBlue: #145374;
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-family: sans-serif;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-family: sans-serif;
+}
+
+input[type="password"]:focus {
+  border: 3px solid #555;
+}
+
+button {
+  background-color: $orange; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1em;
+  font-family: sans-serif;
+}
+
+.joinContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  font-family: sans-serif;
+}
+
+.recentChats {
+  height: 100%;
+  background-color: $lightGreen;
+  text-align: center;
+  border-radius: 1em;
+  h1 {
+    color: $darkBlue;
+    font-family: sans-serif;
+  }
+  .recentList {
+    height: 2em;
+    background-color: $darkBlue;
+    color: white;
+    border-radius: 1em;
+    width: 70%;
+    margin: 1em auto;
+    vertical-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      opacity: 50%;
+    }
+  }
+}
+
+.allContacts {
+  height: 100%;
+  background-color: $pink;
+  text-align: center;
+  border-radius: 1em;
+  h1 {
+    color: $darkPink;
+    font-family: sans-serif;
+  }
+  .contact {
+    height: 2em;
+    background-color: $darkPink;
+    color: white;
+    border-radius: 1em;
+    width: 70%;
+    margin: 1em auto;
+    vertical-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      opacity: 50%;
+    }
+  }
+}
+
+.chatBox {
+  margin: 5%;
+
+  h1 {
+    font-family: sans-serif;
+    background-color: $lime;
+    color: $darkBlue;
+    font-size: 3em;
+    border-radius: 1em;
+    text-align: center;
+  }
+
+  .self {
+    width: 50%;
+    margin: 0 1em 2em auto;
+
+    .message {
+      border-radius: 1em;
+      background-color: $blue;
+      color: white;
+      word-wrap: break-word;
+      padding: 1em 1.5em;
+      font-family: sans-serif;
+    }
+
+    .time {
+      color: $gray;
+      text-align: end;
+      padding: 0 1em;
+      font-family: sans-serif;
+    }
+  }
+
+  .partner {
+    width: 50%;
+    margin: 0 auto 2em 1em;
+
+    .message {
+      border-radius: 1em;
+      background-color: $green;
+      padding: 1em 1.5em;
+      word-wrap: break-word;
+      color: white;
+      font-family: sans-serif;
+    }
+    .time {
+      color: $gray;
+      text-align: start;
+      padding: 0 1em;
+      font-family: sans-serif;
+    }
+  }
+
+  .inputTextarea {
+    margin-top: 2em;
+    margin-left: 2%;
+    width: 90%;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    border-color: -moz-use-text-color #ffffff #ffffff -moz-use-text-color;
+    border-image: none;
+    border-radius: 1em;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    color: #555555;
+    font-size: 1em;
+    line-height: 0.8em;
+    padding: 1em 1em;
+    transition: background-color 0.2s ease 0s;
+    font-family: sans-serif;
+  }
+
+  .messageSendButton {
+    float: right;
+  }
+}
