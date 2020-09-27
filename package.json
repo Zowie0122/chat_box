@@ -5,7 +5,11 @@
   "author": "Zowie",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js "
+    "start": "nodemon index.js ",
+    "build": "cd client && yarn build",
+    "install-client": "cd client && yarn",
+    "heroku-postbuild": "yarn install-client && yarn build",
+    "client": "cd client && yarn start"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
