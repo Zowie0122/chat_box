@@ -1,5 +1,5 @@
 To Start the server:
-yarn start
+yarn server
 To start the client:
 yarn client
 

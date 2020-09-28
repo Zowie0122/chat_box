@@ -23,6 +23,14 @@ app.use("/api/login", jsonParser, login);
 app.use("/api/dashboard", [jsonParser, auth], dashboard);
 app.use("/api/userlists", [jsonParser, auth], userlists);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 io.on("connection", (socket) => {
   console.log("We have a new connection with socket.io!!!");
 
