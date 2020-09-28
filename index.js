@@ -17,10 +17,11 @@ dbConnect();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
-app.use("/register", jsonParser, register);
-app.use("/login", jsonParser, login);
-app.use("/dashboard", [jsonParser, auth], dashboard);
-app.use("/userlists", [jsonParser, auth], userlists);
+
+app.use("/api/register", jsonParser, register);
+app.use("/api/login", jsonParser, login);
+app.use("/api/dashboard", [jsonParser, auth], dashboard);
+app.use("/api/userlists", [jsonParser, auth], userlists);
 
 io.on("connection", (socket) => {
   console.log("We have a new connection with socket.io!!!");

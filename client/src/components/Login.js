@@ -11,7 +11,7 @@ const Register = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5000/login", {
+    const res = await axios.post("http://localhost:5000/api/login", {
       user_name: name,
       user_password: password,
     });

@@ -7,7 +7,7 @@ import Join from "./components/Join";
 const App = () => (
   <Router>
     <Route path="/register" exact component={Register} />
-    <Route path="/" exact component={Login} />
+    <Route path="/login" exact component={Login} />
     <Route path="/join" exact component={Join} />
   </Router>
 );

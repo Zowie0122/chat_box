@@ -25,24 +25,24 @@ const Join = () => {
     if (user_name && id && authtoken) {
       setName(user_name);
 
-      const chatRes = await axios.get("http://localhost:5000/dashboard", {
+      const chatRes = await axios.get("http://localhost:5000/api/dashboard", {
         headers: headers,
       });
       setChatRecords(chatRes.data.user_chats);
 
-      const listRes = await axios.get("http://localhost:5000/userlists", {
+      const listRes = await axios.get("http://localhost:5000/api/userlists", {
         headers: headers,
       });
 
       setContacts(listRes.data);
     } else {
-      history.push("/");
+      history.push("/login");
     }
   };
 
   const saveToRecentContactList = async () => {
     const res = await axios.post(
-      "http://localhost:5000/dashboard",
+      "http://localhost:5000/api/dashboard",
       { user_name: name, partner: target },
       { headers: headers }
     );
@@ -93,7 +93,7 @@ const Join = () => {
           className="contact"
           onClick={() => {
             localStorage.clear();
-            history.push("/");
+            history.push("/login");
           }}
         >
           Logout
